@@ -1,10 +1,26 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {User} from './user/user';
 
 @Component({
-  selector: 'app-root',
+  selector: 'ekoodi-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  selectedUserName: string;
+
+  constructor() {
+    this.selectedUserName = '';
+  }
+
+  changeName(): void {
+    this.selectedUserName = 'eKoodi';
+  }
+
+  onUserSelected(user: User) {
+
+    console.log(user);
+    this.selectedUserName = user.firstName + ' ' + user.lastName;
+  }
 }
