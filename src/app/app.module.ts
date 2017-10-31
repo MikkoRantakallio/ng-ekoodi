@@ -7,6 +7,7 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { UserInfoComponent } from './user/user-info/user-info.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatIconModule, MatInputModule, MatListModule} from '@angular/material';
+import {UserService} from './user/user.service';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,17 @@ import {MatButtonModule, MatIconModule, MatInputModule, MatListModule} from '@an
     UserInfoComponent
   ],
   imports: [
-    BrowserModule, FormsModule, BrowserAnimationsModule,
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
     MatInputModule,
     MatListModule
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
