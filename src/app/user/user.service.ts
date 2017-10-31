@@ -30,11 +30,7 @@ export class UserService {
 
   deleteUser(user: User) {
 
+    _.remove(this.users, {id: user.id});
     console.log(user);
-
-    let index: number = this.users.indexOf(user, 0);
-    if (index > -1) {
-      this.users.splice(index, 1);
-    }
   }
 }
