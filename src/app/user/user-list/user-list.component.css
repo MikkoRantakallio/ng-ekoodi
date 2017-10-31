@@ -2,3 +2,6 @@
   font-size: 18px;
   font-family: "Palatino Linotype";
 }
+.mat-list-item {
+  height: 45px;
+}

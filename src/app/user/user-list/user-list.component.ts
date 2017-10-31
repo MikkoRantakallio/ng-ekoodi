@@ -13,7 +13,7 @@ export class UserListComponent implements OnInit {
   @Output() userSelected: EventEmitter<User>;
 
   constructor() {
-    this.title = 'User List';
+    this.title = 'Hero List';
     this.users = [];
     this.userSelected = new EventEmitter();
   }

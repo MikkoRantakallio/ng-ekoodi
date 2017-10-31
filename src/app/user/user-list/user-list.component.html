@@ -2,6 +2,8 @@
   {{title}}
 </p>
 
-<div *ngFor="let user of users" (click)="onUserSelect(user)">
-  <ekoodi-user-info [user]="user"></ekoodi-user-info>
-</div>
+<mat-list>
+  <ekoodi-user-info *ngFor="let user of users" (click)="onUserSelect(user)"
+                    [user]="user">
+  </ekoodi-user-info>
+</mat-list>

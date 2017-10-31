@@ -2,3 +2,6 @@
   margin-left: 20px;
   font-family: "Palatino Linotype";
 }
+.mat-list-item {
+  height: 45px;
+}

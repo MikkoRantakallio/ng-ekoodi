@@ -1,6 +1,16 @@
 <div>Helou {{selectedUserName}}</div>
-<input class="omanappi" [(ngModel)] ="selectedUserName">
-<button  class="omanappi" (click)="changeName()">Haudi</button>
+
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Hero name" [(ngModel)]="selectedUserName">
+</mat-form-field>
+
+
+<button mat-raised-button class="omanappi" (click)="changeName()">Klik mii!</button>
+
+<button mat-icon-button color="accent">
+  <mat-icon aria-label="Icon">portrait</mat-icon>
+</button>
+
 
 <ekoodi-user-list (userSelected)="onUserSelected($event)">
 </ekoodi-user-list>

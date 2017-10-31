@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserInfoComponent } from './user/user-info/user-info.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatIconModule, MatInputModule, MatListModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,11 @@ import { UserInfoComponent } from './user/user-info/user-info.component';
     UserInfoComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
