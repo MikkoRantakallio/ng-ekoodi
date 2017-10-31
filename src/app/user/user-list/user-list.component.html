@@ -2,6 +2,18 @@
   {{title}}
 </p>
 
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="First name" value="" [(ngModel)]="firstName">
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Last name" value="" [(ngModel)]="lastName">
+</mat-form-field>
+
+<button mat-raised-button class="omanappi" (click)="insertUser()">Add Hero</button>
+
+<button id="deleteButton" mat-raised-button class="omanappi" (click)="deleteUser()">Delete Hero</button>
+
 <mat-list>
   <ekoodi-user-info *ngFor="let user of users" (click)="onUserSelect(user)"
                     [user]="user">

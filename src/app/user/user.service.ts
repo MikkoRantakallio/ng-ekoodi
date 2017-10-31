@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {User} from './user';
+import * as _ from 'lodash';
 
 @Injectable()
 export class UserService {
@@ -19,5 +20,21 @@ export class UserService {
 
   getUsers(): User[] {
     return this.users;
+  }
+
+  insertUser(user: User) {
+
+    this.users.push(user);
+    console.log(user);
+  }
+
+  deleteUser(user: User) {
+
+    console.log(user);
+
+    let index: number = this.users.indexOf(user, 0);
+    if (index > -1) {
+      this.users.splice(index, 1);
+    }
   }
 }

@@ -13,14 +13,4 @@ export class AppComponent {
   constructor() {
     this.selectedUserName = '';
   }
-
-  changeName(): void {
-    this.selectedUserName = 'eKoodi';
-  }
-
-  onUserSelected(user: User) {
-
-    console.log(user);
-    this.selectedUserName = user.firstName + ' ' + user.lastName;
-  }
 }
